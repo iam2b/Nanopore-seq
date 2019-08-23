@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#$ -S /bin/bash
+#$ -cwd
+#$ -V
+#$ -l s_vmem=64G
+#$ -l mem_req=64G
+
+minimap2 -ax splice -uf -k14 /lustre7/home/lustre4/akimitsu-lab/database/genome/hg38/hg38.fa 
+./190730_1_siCTRL/siCTRL_1d_pass.fastq > ./190730_1_siCTRL/siCTRL_1d_pass.sam 
