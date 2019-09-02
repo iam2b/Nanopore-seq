@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#$ -S /bin/bash
+#$ -cwd
+#$ -V
+#$ -l s_vmem=64G
+#$ -l mem_req=64G
+
+stringtie2/stringtie -L -G gencode.v24.annotation.gtf -o siCTRL.out.anno.gtf ./siCTRL_1d_pass_sorted.bam
+## -L long read -G annotation GTF/GFF file -o output path input: sorted bam file
